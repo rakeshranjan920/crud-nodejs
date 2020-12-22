@@ -100,7 +100,7 @@ router.get('/:id', (req, res) => {
 router.get('/delete/:id', (req, res) => {
     Schema.findByIdAndRemove(req.params.id, (err, doc) => {
         if (!err) {
-            res.redirect('/data/list');
+            res.redirect('/user/list');
         }
         else { console.log('Error in data delete :' + err); }
     });
