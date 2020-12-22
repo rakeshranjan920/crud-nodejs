@@ -1,4 +1,7 @@
 # crud-nodejs
+npm install
+
+
 To Run ------   node server.js 
 
 
