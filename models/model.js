@@ -5,16 +5,17 @@ var schema = new mongoose.Schema({
         type: String,
         required: 'This field is required.'
     },
-    countryCode: {
+    emailId: {
+        type: String,
+        required: 'This field is required.'
+    },
+    testscore1: {
         type: String
     },
-    mobile: {
+    testscore2: {
         type: String
     },
-    city: {
-        type: String
-    },
-    gender: {
+    testscore3: {
         type: String
     }
 });
