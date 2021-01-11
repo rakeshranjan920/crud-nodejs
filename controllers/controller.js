@@ -20,10 +20,10 @@ router.post('/', (req, res) => {
 function insertRecord(req, res) {
     var data = new Schema();
     data.fullName = req.body.fullName;
-    data.countryCode = req.body.countryCode;
-    data.mobile = req.body.mobile;
-    data.city = req.body.city;
-    data.gender = req.body.gender;
+    data.emailId = req.body.emailId;
+    data.testScore1 = req.body.testScore1;
+    data.testScore2= req.body.testScore2;
+    data.testScore3 = req.body.tetScore3;
     
     data.save((err, doc) => {
         if (!err)
@@ -100,7 +100,7 @@ router.get('/:id', (req, res) => {
 router.get('/delete/:id', (req, res) => {
     Schema.findByIdAndRemove(req.params.id, (err, doc) => {
         if (!err) {
-            res.redirect('/data/list');
+            res.redirect('/user/list');
         }
         else { console.log('Error in data delete :' + err); }
     });
